@@ -5,7 +5,7 @@ import AuthContext from '../context/AuthContext'
 const PrivateRoute=({children})=>{
     let {id}=useContext(AuthContext)
     return(<>
-        {!id ?<Navigate to="/authenticate" />:children}
+        {!id ?<Navigate to="/" />:children}
         </>
     )
 }

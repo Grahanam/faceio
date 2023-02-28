@@ -15,9 +15,10 @@ function App() {
     <BrowserRouter>
     <AuthProvider>
       <Routes>
-        <Route path="/" element={<PrivateRoute><Home/></PrivateRoute>} />
+        
         {/* <Route path="/*" element={<Layout/>} exact/> */}
-        <Route path="/authenticate" element={<Authenticate/>}/>
+        <Route path="/" element={<Authenticate/>}/>
+        <Route path="/dashboard" element={<PrivateRoute><Home/></PrivateRoute>} />
         
       </Routes>
     </AuthProvider>  
