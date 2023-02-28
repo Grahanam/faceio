@@ -1,10 +1,8 @@
-import { useEffect} from 'react'
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Authenticate from './pages/authenticate'
 import Home from './pages/home'
 import './App.css'
 import PrivateRoute from './utils/PrivateRoute'
-import Layout from './hocs/layout'
 
 import { AuthProvider } from './context/AuthContext'
 
@@ -15,11 +13,8 @@ function App() {
     <BrowserRouter>
     <AuthProvider>
       <Routes>
-        
-        {/* <Route path="/*" element={<Layout/>} exact/> */}
         <Route path="/faceio" element={<Authenticate/>} exact/>
         <Route path="/faceio/dashboard" element={<PrivateRoute><Home/></PrivateRoute>} exact/>
-        
       </Routes>
     </AuthProvider>  
     

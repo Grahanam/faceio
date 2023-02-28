@@ -1,5 +1,6 @@
 import React, { useEffect,useState,createContext } from 'react'
 import {useNavigate} from 'react-router-dom'
+
 const AuthContext=createContext()
 
 export default AuthContext;
@@ -52,7 +53,7 @@ export const AuthProvider=({children})=>{
             console.log(error);
           }
           location.reload();
-          // navigate("/");
+          // navigate("/faceio");
     }
     let LogoutUser=()=>{
         setId(null)
@@ -83,7 +84,6 @@ export const AuthProvider=({children})=>{
         }
         setLoading(false)
         faceio = new faceIO("fioa61a9");
-        
         
     },[email,id,loading])
     return(
