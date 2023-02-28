@@ -17,8 +17,8 @@ function App() {
       <Routes>
         
         {/* <Route path="/*" element={<Layout/>} exact/> */}
-        <Route path="/" element={<Authenticate/>} exact/>
-        <Route path="/dashboard" element={<PrivateRoute><Home/></PrivateRoute>} exact/>
+        <Route path="/faceio" element={<Authenticate/>} exact/>
+        <Route path="/faceio/dashboard" element={<PrivateRoute><Home/></PrivateRoute>} exact/>
         
       </Routes>
     </AuthProvider>  

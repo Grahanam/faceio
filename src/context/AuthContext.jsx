@@ -31,7 +31,7 @@ export const AuthProvider=({children})=>{
             Gender: ${response.details.gender}
             Age Approximation: ${response.details.age}`);
             //Add your Backend endpoint to save user data
-            navigate('/')
+            navigate('/faceio')
           } catch (error) {
             console.log(error);
           }
@@ -60,7 +60,7 @@ export const AuthProvider=({children})=>{
         localStorage.removeItem('faceid')
         localStorage.removeItem('id')
         
-        navigate('/')
+        navigate('/faceio')
     }
     let contextData={
       SignupUser:SignupUser,
@@ -79,7 +79,7 @@ export const AuthProvider=({children})=>{
         }
         if(email){
           setemailid(localStorage.getItem('id'))
-          navigate('/dashboard')
+          navigate('/faceio/dashboard')
         }
         setLoading(false)
         faceio = new faceIO("fioa61a9");
